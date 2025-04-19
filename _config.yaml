@@ -1,0 +1,13 @@
+title: 区块链/云原生运维专家简历
+description: 15年+资深运维专家 | 数字钱包/区块链基础设施建设
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
