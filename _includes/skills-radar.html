@@ -1,59 +1,153 @@
-<!-- 技能雷达图组件 -->
-<div class="skills-radar">
-    <canvas id="skillsRadarChart"></canvas>
+<!-- 技能矩阵组件 -->
+<div class="skills-matrix">
+    <div class="skill-category">
+        <h3>云原生技术</h3>
+        <div class="skill-items">
+            <div class="skill-item">
+                <span class="skill-name">Kubernetes</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 95%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Docker</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Istio</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skill-category">
+        <h3>自动化工具</h3>
+        <div class="skill-items">
+            <div class="skill-item">
+                <span class="skill-name">Ansible</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 92%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Terraform</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 88%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Shell/Python</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skill-category">
+        <h3>监控与日志</h3>
+        <div class="skill-items">
+            <div class="skill-item">
+                <span class="skill-name">Prometheus</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">ELK Stack</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Grafana</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 88%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skill-category">
+        <h3>CI/CD</h3>
+        <div class="skill-items">
+            <div class="skill-item">
+                <span class="skill-name">Jenkins</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 92%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">GitLab CI</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 88%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">ArgoCD</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const ctx = document.getElementById('skillsRadarChart').getContext('2d');
-    new Chart(ctx, {
-        type: 'radar',
-        data: {
-            labels: ['云原生技术', 'DevOps实践', '自动化运维', '系统架构', '问题排查', '团队协作'],
-            datasets: [{
-                label: '技能水平',
-                data: [95, 90, 92, 85, 88, 85],
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                pointBackgroundColor: 'rgba(54, 162, 235, 1)',
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgba(54, 162, 235, 1)'
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                r: {
-                    angleLines: {
-                        display: true
-                    },
-                    suggestedMin: 0,
-                    suggestedMax: 100,
-                    ticks: {
-                        stepSize: 20
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    display: false
-                }
-            }
-        }
-    });
-});
-</script>
-
 <style>
-.skills-radar {
-    width: 100%;
-    max-width: 600px;
+.skills-matrix {
+    max-width: 900px;
     margin: 2rem auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.skill-category {
+    margin-bottom: 2rem;
+    background: #fff;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+    margin: 0 0 1rem 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.skill-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.skill-item {
+    margin-bottom: 1rem;
+}
+
+.skill-name {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.skill-bar {
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    border-radius: 4px;
+    transition: width 0.5s ease;
 }
 </style> 
