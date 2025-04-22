@@ -1,6 +1,30 @@
 <!-- 技能矩阵组件 -->
 <div class="skills-matrix">
     <div class="skill-category">
+        <h3>区块链技术</h3>
+        <div class="skill-items">
+            <div class="skill-item">
+                <span class="skill-name">区块链节点运维</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 95%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">多链钱包架构</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 92%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">智能合约部署</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 88%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skill-category">
         <h3>云原生技术</h3>
         <div class="skill-items">
             <div class="skill-item">
@@ -10,13 +34,13 @@
                 </div>
             </div>
             <div class="skill-item">
-                <span class="skill-name">Docker</span>
+                <span class="skill-name">服务网格</span>
                 <div class="skill-bar">
                     <div class="skill-level" style="width: 90%"></div>
                 </div>
             </div>
             <div class="skill-item">
-                <span class="skill-name">Istio</span>
+                <span class="skill-name">云原生存储</span>
                 <div class="skill-bar">
                     <div class="skill-level" style="width: 85%"></div>
                 </div>
@@ -25,46 +49,22 @@
     </div>
 
     <div class="skill-category">
-        <h3>自动化工具</h3>
+        <h3>DevOps实践</h3>
         <div class="skill-items">
             <div class="skill-item">
-                <span class="skill-name">Ansible</span>
+                <span class="skill-name">自动化运维</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 95%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">CI/CD Pipeline</span>
                 <div class="skill-bar">
                     <div class="skill-level" style="width: 92%"></div>
                 </div>
             </div>
             <div class="skill-item">
-                <span class="skill-name">Terraform</span>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 88%"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Shell/Python</span>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="skill-category">
-        <h3>监控与日志</h3>
-        <div class="skill-items">
-            <div class="skill-item">
-                <span class="skill-name">Prometheus</span>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">ELK Stack</span>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 85%"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Grafana</span>
+                <span class="skill-name">GitOps</span>
                 <div class="skill-bar">
                     <div class="skill-level" style="width: 88%"></div>
                 </div>
@@ -73,24 +73,24 @@
     </div>
 
     <div class="skill-category">
-        <h3>CI/CD</h3>
+        <h3>可观测性</h3>
         <div class="skill-items">
             <div class="skill-item">
-                <span class="skill-name">Jenkins</span>
+                <span class="skill-name">监控告警</span>
                 <div class="skill-bar">
-                    <div class="skill-level" style="width: 92%"></div>
+                    <div class="skill-level" style="width: 95%"></div>
                 </div>
             </div>
             <div class="skill-item">
-                <span class="skill-name">GitLab CI</span>
+                <span class="skill-name">日志分析</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">链路追踪</span>
                 <div class="skill-bar">
                     <div class="skill-level" style="width: 88%"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">ArgoCD</span>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 85%"></div>
                 </div>
             </div>
         </div>
@@ -149,5 +149,11 @@
     background: linear-gradient(90deg, #3498db, #2980b9);
     border-radius: 4px;
     transition: width 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .skill-items {
+        grid-template-columns: 1fr;
+    }
 }
 </style> 
